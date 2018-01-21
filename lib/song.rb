@@ -49,9 +49,9 @@ class Song
   def self.new_from_filename(nameo)
     array = nameo.split(" - ")
     artist = array[0]
-    song_name = array[1]
+    song_name = parts[1].gsub(".mp3", "")
     song = self.new
-    song.name = song_name.chomp(".mp3")
+    song.name = song_name.
     song.artist_name = artist
   end
 
