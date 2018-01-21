@@ -46,8 +46,8 @@ class Song
     @@all.sort_by! {|word| word.name}
   end
 
-  def self.new_from_filename(name)
-    array = name.split(" - ")
+  def self.new_from_filename(nameo)
+    array = nameo.split(" - ")
     artist = array[0]
     song_name = array[1]
     song = self.new
