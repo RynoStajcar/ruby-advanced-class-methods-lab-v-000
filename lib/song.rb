@@ -57,7 +57,13 @@ class Song
   end
 
   def self.create_from_filename
-
+    array = nameo.split(" - ")
+    artist = array[0]
+    song_name = array[1]
+    song = self.create
+    song.name = song_name.chomp(".mp3")
+    song.artist_name = artist
+    song
   end
 
   def self.destroy_all
