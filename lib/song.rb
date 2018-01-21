@@ -50,8 +50,8 @@ class Song
     array = nameo.split(" - ")
     artist = array[0]
     song_name = array[1]
-    song = self.new
-    song.name = song_name
+    song_name = self.new
+    song.name = song_name.chomp(".mp3")
     song.artist_name = artist
   end
 
