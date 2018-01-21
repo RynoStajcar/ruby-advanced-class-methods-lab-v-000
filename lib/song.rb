@@ -46,8 +46,8 @@ class Song
     @@all.sort_by! {|word| word.name}
   end
 
-  def self.new_from_filename(nameo)
-    array = nameo.split(" - ")
+  def self.new_from_filename(name)
+    array = name.split(" - ")
     artist = array[0]
     song_name = array[1]
     song = self.new
@@ -56,8 +56,8 @@ class Song
     song
   end
 
-  def self.create_from_filename
-    array = nameo.split(" - ")
+  def self.create_from_filename(name)
+    array = name.split(" - ")
     artist = array[0]
     song_name = array[1]
     song = self.create
